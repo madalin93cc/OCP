@@ -35,5 +35,18 @@ public class NumberFormatExamples {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+
+        String s = "987.123456";
+        double d = 987.123456d;
+
+        NumberFormat nf = NumberFormat.getInstance();
+        nf.setMaximumFractionDigits(5);
+        System.out.print(nf.format(d) + " ");
+        try {
+            System.out.println(nf.parse(s));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

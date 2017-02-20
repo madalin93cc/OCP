@@ -1,5 +1,6 @@
 package ocp.parsing;
 
+import java.text.NumberFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -74,13 +75,17 @@ public class RegexExamples {
 //        Matcher m = p.matcher("abxxyabxx");
 //        Pattern p = Pattern.compile(".*?xx"); // reluctant
 //        Matcher m = p.matcher("abxxyabxx");
-        Pattern p = Pattern.compile(".*\\."); // search for . character
-        Matcher m = p.matcher("aaa.");
+//        Pattern p = Pattern.compile(".*\\."); // search for . character
+//        Matcher m = p.matcher("aaa.");
 
+        Pattern p = Pattern.compile("\\B");
+        Matcher m = p.matcher("^23 *$76 bc");
         System.out.println("Matches: ");
         while (m.find()) {
-            System.out.println(m.start() + " " + m.group());
+//            System.out.println(m.start() + " " + m.group());
+            System.out.print(m.start() + " ");
         }
+
     }
 
 }
