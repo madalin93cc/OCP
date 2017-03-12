@@ -1,4 +1,4 @@
-package ocp.collections.innerclasses;
+package ocp.innerclasses;
 
 /**
  * Created by Madalin.Colezea on 3/3/2017.

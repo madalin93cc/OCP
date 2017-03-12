@@ -1,5 +1,9 @@
 package ocp.threads;
 
+import java.sql.DriverManager;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Madalin on 05/03/2017.
  * Actiunea e in metoda public void run()

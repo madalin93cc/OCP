@@ -1,4 +1,4 @@
-package ocp.collections.innerclasses;
+package ocp.innerclasses;
 
 import java.util.ArrayList;
 import java.util.Collections;
