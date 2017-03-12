@@ -35,6 +35,7 @@ public class BasicAttributesExamples {
         System.out.println(Files.isExecutable(p));
         System.out.println(Files.getLastModifiedTime(p));
         FileTime ft = FileTime.fromMillis(new Date().getTime());
+        Files.setLastModifiedTime(p, ft);
         System.out.println(Files.getLastModifiedTime(p));
     }
 }
