@@ -65,6 +65,41 @@ public class ResultSetExamples {
             }
             out.println();
         }
+
+//        test iterator methods
+        Statement statement1 = connection.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+        ResultSet rs3 = statement1.executeQuery(query);
+        out.println(rs3.getRow());
+        rs3.next();
+        out.println(rs3.getRow());
+        rs3.next();
+        rs3.previous();
+        out.println(rs3.getRow());
+        rs3.absolute(2);
+        out.println(rs3.getRow());
+        rs3.absolute(-1);
+        out.println(rs3.getRow());
+        rs3.next();
+        out.println(rs3.getRow());
+        rs3.first();
+        out.println(rs3.getRow());
+        rs3.last();
+        out.println(rs3.getRow());
+        rs3.beforeFirst();
+        out.println(rs3.getRow());
+        rs3.afterLast();
+        out.println(rs3.getRow());
+        rs3.relative(-2);
+        out.println(rs3.getRow());
+        rs3.beforeFirst();
+        out.println(rs3.isBeforeFirst());
+        rs3.next();
+        out.println(rs3.isFirst());
+        rs3.last();
+        out.println(rs3.isLast());
+        rs3.next();
+        out.println(rs3.isAfterLast());
+
     }
 }
 
